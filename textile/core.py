@@ -162,13 +162,13 @@ class Textile(object):
             # plus/minus
             re.compile(r'[([]\+\/-[])]'),
             # 3+ uppercase acronym
-            re.compile(r'\b([{0}][{1}]{{2,}})\b(?:[(]([^)]*)[)])'.format(
-                regex_snippets['abr'], regex_snippets['acr']), flags=re.U),
+            # re.compile(r'\b([{0}][{1}]{{2,}})\b(?:[(]([^)]*)[)])'.format(
+            #     regex_snippets['abr'], regex_snippets['acr']), flags=re.U),
             # 3+ uppercase
-            re.compile(r'({space}|^|[>(;-])([{abr}]{{3,}})([{nab}]*)'
-                '(?={space}|{pnct}|<|$)(?=[^">]*?(<|$))'.format(**{ 'space':
-                    regex_snippets['space'], 'abr': regex_snippets['abr'],
-                    'nab': regex_snippets['nab'], 'pnct': pnct_re_s}), re.U),
+            # re.compile(r'({space}|^|[>(;-])([{abr}]{{3,}})([{nab}]*)'
+            #     '(?={space}|{pnct}|<|$)(?=[^">]*?(<|$))'.format(**{ 'space':
+            #         regex_snippets['space'], 'abr': regex_snippets['abr'],
+            #         'nab': regex_snippets['nab'], 'pnct': pnct_re_s}), re.U),
         ]
 
         # These are the changes that need to be made for characters that occur
